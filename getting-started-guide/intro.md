@@ -1,4 +1,4 @@
-##The goal of this interactive guide is to run and update a simple REST microservice on an Open Liberty Server. 
+## The goal of this interactive guide is to run and update a simple REST microservice on an Open Liberty Server. 
 
 The online terminal is a pre-configured Linux environment. Clicking on the blocks of code and pressing ENTER will execute that command in the terminal.
 

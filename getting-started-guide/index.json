@@ -35,7 +35,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "pre.sh"
     },
     "finish": {
       "text": "finish.md"
