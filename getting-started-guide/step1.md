@@ -6,7 +6,9 @@ Navigate to the start directory where your pom.xml file is located. Your pom.xml
 
 `cd start`{{execute}}
 
-`mvn install liberty:run-server` {{execute}}
+For it to work 
+
+`mvn install liberty:run-server`{{execute}}
 
 The mvn command initiates a Maven build, during which the target directory is created to store all build-related files.
 
@@ -32,9 +34,9 @@ To access the `system` microservice, visit the http://localhost:9080/system/prop
 
 Later, when you need to stop the server, simply press CTRL+C in the shell session where you ran the server, or run the liberty:stop-server goal from the start directory in another shell session:
 
-`click here to open a new shell session` {{execute}}
+`click here to open a new shell session`{{execute}}
 
-`mvn liberty:stop-server` {{execute}}
+`mvn liberty:stop-server`{{execute}}
 
 
 
