@@ -2,9 +2,13 @@
 
 Your application is configured to be built with Maven. Every Maven-configured project contains a pom.xml file, which defines the project configuration, dependencies, plug-ins, and so on.
 
+Firstly, we need to export the Java Home JRE
+
+`export PATH=$JAVA_HOME/jre/bin:$PATH`{{execute}}
+
 Navigate to the start directory where your pom.xml file is located. Your pom.xml file is configured to include the liberty-maven-plugin, which allows you to install applications into Open Liberty as well as manage the server instances.
 
-`cd start`{{execute}}
+`cd guide-getting-started/start`{{execute}}
 
 For it to work 
 
@@ -32,7 +36,7 @@ To access the `system` microservice, visit the http://localhost:9080/system/prop
 `}`
 
 
-Later, when you need to stop the server, simply press CTRL+C in the shell session where you ran the server, or run the liberty:stop-server goal from the start directory in another shell session:
+ Later, when you need to stop the server, simply press CTRL+C in the shell session where you ran the server, or run the liberty:stop-server goal from the start directory in another shell session:
 
 `click here to open a new shell session`{{execute}}
 
