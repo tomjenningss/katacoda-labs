@@ -26,7 +26,7 @@ When the server begins starting up, various messages display in your active shel
 
 `The server GettingStartedServer is ready to run a smarter planet.`
 
-To access the `system` microservice, visit the http://localhost:9080/system/properties URL, and you’ll see a list of the various system properties of your JVM:
+To access the `system` microservice, access the service endpoint to cause some application measurements to be recorded: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/system/properties"> http://localhost:9080/system/properties</a>.
 
 
 `{`
@@ -36,12 +36,7 @@ To access the `system` microservice, visit the http://localhost:9080/system/prop
 `}`
 
 
- Later, when you need to stop the server, simply press CTRL+C in the shell session where you ran the server, or run the liberty:stop-server goal from the start directory in another shell session:
-
-`click here to open a new shell session`{{execute}}
-
-`mvn liberty:stop-server`{{execute}}
-
+ Later, when you need to stop the server, simply press `CTRL+C` in the shell session where you ran the server.
 
 
 
