@@ -17,6 +17,16 @@ MicroProfile Health offers health checks for both readiness and liveness. A read
 
 ### Create the SystemReadinessCheck class.
 
+Head to the directory where the SystemReadinessCheck class will be created
+
+`cd src/main/java/io/openliberty/sample/system`{{execute}}
+
+Create SystemReadinessCheck class
+
+`touch SystemReadinessCheck.Java`{{execute}}
+
+Insert code into SystemReadinessCheck class
+
 <pre class="file" data-target="clipboard">
 package io.openliberty.sample.system;
 
@@ -56,53 +66,13 @@ The `SystemReadinessCheck` class verifies that the `system` microservice is not 
 
 Go to the directory that the `SystemReadinessCheck.java` will be saved
 
+Now we create the SystemLivenessCheck class
+
 `cd src/main/java/io/openliberty/sample/system`{{execute}}
 
-[comment]: <> (Need to add a copy button to copy the contents of the .java file)
+Create a new file called `SystemLivenessCheck.java`
 
-Create a new file called `SystemReadinessCheck.java`{{execute}}
-
-<pre class="file" data-target="clipboard">
-package io.openliberty.sample.system;
-
-import javax.enterprise.context.ApplicationScoped;
-
-import java.lang.management.MemoryMXBean;
-import java.lang.management.ManagementFactory;
-
-import org.eclipse.microprofile.health.Liveness;
-import org.eclipse.microprofile.health.HealthCheck;
-import org.eclipse.microprofile.health.HealthCheckResponse;
-
-@Liveness
-@ApplicationScoped
-public class SystemLivenessCheck implements HealthCheck {
-
-    @Override
-    public HealthCheckResponse call() {
-        MemoryMXBean memBean = ManagementFactory.getMemoryMXBean();
-        long memUsed = memBean.getHeapMemoryUsage().getUsed();
-        long memMax = memBean.getHeapMemoryUsage().getMax();
-
-        return HealthCheckResponse.named(
-            SystemResource.class.getSimpleName() + " liveness check")
-                                  .withData("memory used", memUsed)
-                                  .withData("memory max", memMax)
-                                  .state(memUsed < memMax * 0.9).build();
-    }
-
-}
-</pre>
-
-The SystemReadinessCheck class verifies that the system microservice is not in maintenance by checking a config property.
-
-Go to the directory that SystemLivenessCheck class will be in 
-
-
-[comment]: <> (Need to change the file directory name to the correct one for katacoda)
-`src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`{{execute}}
-
-Create the `SystemLivenessCheck` class.
+`touch SystemLivenessCheck.java`{{execute}}
 
 <pre class="file" data-target="clipboard">
 package io.openliberty.sample.system;
@@ -135,8 +105,6 @@ public class SystemLivenessCheck implements HealthCheck {
 
 }
 </pre>
-
-The `SystemLivenessCheck` class reports a status of `DOWN` if the microservice uses over 90% of the maximum amount of memory.
 
 Next, recompile the application:
 
