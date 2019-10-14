@@ -16,4 +16,38 @@ In addition to the log files that are generated automatically, you can enable lo
 
 The `component` element is a Java package or class, and the `level` element is one of the following logging levels: `off`, `fatal`, `severe`, `warning`, `audit`, `info`, `config`, `detail`, `fine`, `finer`, `finest`, `all`.
 
-Try enabling detailed logging of the MicroProfile Health feature by adding the <logging/> element to your configuration file.
+Try enabling detailed logging of the MicroProfile Health feature by adding the `<logging/>` element to your configuration file.
+
+Go to the server.xml configuration directory and replace the configuration file 
+
+`src/main/liberty/config/`{{execute}}
+
+<pre class="file" data-target="clipboard">
+<server description="Sample Liberty server">
+    <featureManager>
+        <feature>jaxrs-2.1</feature>
+        <feature>jsonp-1.1</feature>
+        <feature>cdi-2.0</feature>
+        <feature>mpMetrics-2.0</feature>
+        <feature>mpHealth-2.0</feature>
+        <feature>mpConfig-1.3</feature>
+    </featureManager>
+
+    <applicationManager autoExpand="true" />
+    <quickStartSecurity userName="admin" userPassword="adminpwd" />
+    <keyStore id="defaultKeyStore" password="mpKeystore" />
+    <logging traceSpecification="com.ibm.ws.microprofile.health.*=all" />
+    <httpEndpoint host="*" httpPort="${default.http.port}"
+        httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
+
+    <variable name="io_openliberty_guides_system_inMaintenance" value="false"/>
+
+    <webApplication location="getting-started.war" contextRoot="/"/>
+</server>
+</pre>
+
+Next, repackage the server:
+
+`mvn package`{{execute}}
+
+Now, when you visit the `/health` endpoint, additional traces are logged into the `trace.log` file.

@@ -1,37 +1,40 @@
 ## Updating the server configuration without restarting the server
 
+Open up a new terminal window
+
 When you update the server configuration files, you can run the `mvn package` command to invoke the Maven `package` phase that executes various Maven goals that repackage the server.
 
 Try updating the server configuration while the server is running. If you stopped the server, start it again before you proceed. The `system` microservice does not currently include health monitoring to report whether the server and the microservice that it runs are healthy. You can add health reports with the MicroProfile Health feature, which adds a `/health` endpoint to your application. If you try to access this endpoint now at the  <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a>` URL, you see a 404 error because the /health endpoint does not yet exist:
 
 `Error 404: java.io.FileNotFoundException: SRVE0190E: File not found: /health`
 
+Open up the server.xml file and add the MicroProfile Health feature to the server, include the mpHealth feature in the server.xml.
 
-Open up the server.xml file located `here` and add the MicroProfile Health feature to the server, include the mpHealth feature in the server.xml.
+Replace the server configuration file.
+`src/main/liberty/config/server.xml`
 
-<pre>
-<server description="Sample Liberty server">
-    <featureManager>
-        <feature>jaxrs-2.1</feature>
-        <feature>jsonp-1.1</feature>
-        <feature>cdi-2.0</feature>
-        <feature>mpMetrics-2.0</feature>
-        <feature>mpHealth-2.0</feature>
-        <feature>mpConfig-1.3</feature>
-    </featureManager>
+<pre class="file" data-target="clipboard">
+    <server description="Sample Liberty server">
+        <featureManager>
+            <feature>jaxrs-2.1</feature>
+            <feature>jsonp-1.1</feature>
+            <feature>cdi-2.0</feature>
+            <feature>mpMetrics-2.0</feature>
+            <feature>mpHealth-2.0</feature>
+            <feature>mpConfig-1.3</feature>
+        </featureManager>
 
-    <applicationManager autoExpand="true" />
-    <quickStartSecurity userName="admin" userPassword="adminpwd" />
-    <keyStore id="defaultKeyStore" password="mpKeystore" />
-    <httpEndpoint host="*" httpPort="${default.http.port}"
-        httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
+        <applicationManager autoExpand="true" />
+        <quickStartSecurity userName="admin" userPassword="adminpwd" />
+        <keyStore id="defaultKeyStore" password="mpKeystore" />
+        <httpEndpoint host="*" httpPort="${default.http.port}"
+            httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
 
-    <variable name="io_openliberty_guides_system_inMaintenance" value="false"/>
+        <variable name="io_openliberty_guides_system_inMaintenance" value="false"/>
 
-    <webApplication location="getting-started.war" contextRoot="/"/>
-</server>
+        <webApplication location="getting-started.war" contextRoot="/"/>
+    </server>
 </pre>
-
 
 Next, open a new shell session, by pressing the (+) next to the `Terminal` navigate to the start directory, 
 
