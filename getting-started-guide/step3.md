@@ -26,6 +26,10 @@ Create SystemReadinessCheck class
 
 `touch SystemReadinessCheck.java`{{execute}}
 
+Open SystemReadinessCheck.java
+
+`/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java`{{open}}
+
 Insert code into SystemReadinessCheck class
 
 <pre class="file" data-target="clipboard">
@@ -73,6 +77,10 @@ Create a new file called `SystemLivenessCheck.java`
 
 `touch SystemLivenessCheck.java`{{execute}}
 
+Open SystemLivenessCheck
+
+`/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`{{open}}
+
 <pre class="file" data-target="clipboard">
 package io.openliberty.sample.system;
 
@@ -107,7 +115,7 @@ public class SystemLivenessCheck implements HealthCheck {
 
 Go back to the directory that the pom.xml file is in, to recomplie with the updates
 
-`cd guide-getting-started/start`{{execute}}
+`cd /root/guide-getting-started/start`{{execute}}
 
 Next, recompile the application:
 
