@@ -105,6 +105,10 @@ public class SystemLivenessCheck implements HealthCheck {
 }
 </pre>
 
+Go back to the directory that the pom.xml file is in, to recomplie with the updates
+
+`cd guide-getting-started/start`{{execute}}
+
 Next, recompile the application:
 
 `mvn compile`{{execute}}
