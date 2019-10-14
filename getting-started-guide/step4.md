@@ -20,9 +20,11 @@ Try enabling detailed logging of the MicroProfile Health feature by adding the `
 
 Go to the server.xml configuration directory and replace the configuration file 
 
-`src/main/liberty/config/`{{execute}}
-
+`cd src/main/liberty/config/`{{execute}}
+```
 <pre class="file" data-target="clipboard">
+
+
 <server description="Sample Liberty server">
     <featureManager>
         <feature>jaxrs-2.1</feature>
@@ -44,8 +46,10 @@ Go to the server.xml configuration directory and replace the configuration file
 
     <webApplication location="getting-started.war" contextRoot="/"/>
 </server>
-</pre>
 
+
+</pre>
+```
 Next, repackage the server:
 
 `mvn package`{{execute}}
