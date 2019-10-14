@@ -18,7 +18,7 @@ Open up the server.xml file and add the MicroProfile Health feature to the serve
 
 Replace the server configuration file. Navigate to server.xml file: 
 
-`cd guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
+`guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
 
 Add the feature to line 8 of the server.xml file
 
