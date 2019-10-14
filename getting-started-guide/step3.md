@@ -79,7 +79,7 @@ Create a new file called `SystemLivenessCheck.java`
 
 Open SystemLivenessCheck
 
-`/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`{{open}}
+`SystemLivenessCheck.java`{{open}}
 
 <pre class="file" data-target="clipboard">
 package io.openliberty.sample.system;
