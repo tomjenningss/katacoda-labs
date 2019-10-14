@@ -18,15 +18,13 @@ Open up the server.xml file and add the MicroProfile Health feature to the serve
 
 Replace the server configuration file. Navigate to server.xml file: 
 
-`src/main/liberty/config/server.xml`{{open}}
+`cd guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
 
 Add the feature to line 8 of the server.xml file
 
 `<feature>mpHealth-2.0</feature>`{{copy}}
-           
 
-
-Next, open a new shell session, by pressing the (+) next to the `Terminal` navigate to the start directory, 
+Navigate to the start directory, 
 
 `cd guide-getting-started/start`{{execute}}
 
