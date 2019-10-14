@@ -20,7 +20,7 @@ Replace the server configuration file. Navigate to server.xml file:
 
 `src/main/liberty/config/server.xml`
 
-<pre class="file" data-target="clipboard">
+
     
     <server description="Sample Liberty server">
         <featureManager>
@@ -42,7 +42,7 @@ Replace the server configuration file. Navigate to server.xml file:
 
         <webApplication location="getting-started.war" contextRoot="/"/>
     </server>
-</pre>
+
 
 Next, open a new shell session, by pressing the (+) next to the `Terminal` navigate to the start directory, 
 
