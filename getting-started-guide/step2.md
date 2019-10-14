@@ -20,7 +20,7 @@ Replace the server configuration file. Navigate to server.xml file:
 
 Open server.xml file 
 
-`cd guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
+`guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
 
 Add the feature to line 8 of the server.xml file
 
