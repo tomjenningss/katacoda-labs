@@ -18,30 +18,12 @@ Open up the server.xml file and add the MicroProfile Health feature to the serve
 
 Replace the server configuration file. Navigate to server.xml file: 
 
-`src/main/liberty/config/server.xml`
+`src/main/liberty/config/server.xml`{{open}}
 
+Add the feature to line 8 of the server.xml file
 
-    
-    <server description="Sample Liberty server">
-        <featureManager>
-            <feature>jaxrs-2.1</feature>
-            <feature>jsonp-1.1</feature>
-            <feature>cdi-2.0</feature>
-            <feature>mpMetrics-2.0</feature>
-            <feature>mpHealth-2.0</feature>
-            <feature>mpConfig-1.3</feature>
-        </featureManager>
-
-        <applicationManager autoExpand="true" />
-        <quickStartSecurity userName="admin" userPassword="adminpwd" />
-        <keyStore id="defaultKeyStore" password="mpKeystore" />
-        <httpEndpoint host="*" httpPort="${default.http.port}"
-            httpsPort="${default.https.port}" id="defaultHttpEndpoint"/>
-
-        <variable name="io_openliberty_guides_system_inMaintenance" value="false"/>
-
-        <webApplication location="getting-started.war" contextRoot="/"/>
-    </server>
+`<feature>mpHealth-2.0</feature>`{{copy}}
+           
 
 
 Next, open a new shell session, by pressing the (+) next to the `Terminal` navigate to the start directory, 
