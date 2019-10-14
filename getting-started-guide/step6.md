@@ -8,6 +8,12 @@ Open Liberty supports a number of different server packages. The sample applicat
 
 The type of server package is configured with `<packaging.type/>` in the `pom.xml`.
 
+Check that you are in the start directory
+
+`root/guide-getting-started/start`
+
+`pwd`{{execute}}
+
 Instead of creating a server package, you can generate a runnable JAR file that contains the application along with a server runtime. This JAR can then be run anywhere and deploy your application and server at the same time. To generate a runnable JAR, invoke the `runnable-package` profile by using the `-P` flag:
 
 `mvn install -P runnable-package`{{execute}}
@@ -22,6 +28,8 @@ When the build completes, you can find the runnable `getting-started.jar` file i
 The `minify-runnable-package` profile overrides the `packaging.type` property from the `usr` package to the `minify,runnable` package and generates a runnable JAR file that contains only the `features` that you explicitly enabled in your `server.xml` file. As a result, the generated JAR is only about 50 MB.
 
 To run the JAR, first stop the server if it’s running. Then, navigate to the `target` directory and run the `java -jar` command:
+
+`cd target`{{execute}}
 
 `java -jar getting-started.jar`{{execute}}
 
