@@ -28,7 +28,7 @@ Create SystemReadinessCheck class
 
 Open SystemReadinessCheck.java
 
-`/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java`{{open}}
+`SystemReadinessCheck.java`{{open}}
 
 Insert code into SystemReadinessCheck class
 
