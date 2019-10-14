@@ -2,6 +2,12 @@
 
 Open up a new terminal window
 
+We need to export the Java Home JRE
+
+`export JAVA_HOME=$(/usr/lib/jvm/java-8-openjdk-amd64)`{{execute}}
+
+`export PATH=$JAVA_HOME/jre/bin:$PATH`{{execute}}
+
 When you update the server configuration files, you can run the `mvn package` command to invoke the Maven `package` phase that executes various Maven goals that repackage the server.
 
 Try updating the server configuration while the server is running. If you stopped the server, start it again before you proceed. The `system` microservice does not currently include health monitoring to report whether the server and the microservice that it runs are healthy. You can add health reports with the MicroProfile Health feature, which adds a `/health` endpoint to your application. If you try to access this endpoint now at the  <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a>` URL, you see a 404 error because the /health endpoint does not yet exist:
@@ -10,10 +16,12 @@ Try updating the server configuration while the server is running. If you stoppe
 
 Open up the server.xml file and add the MicroProfile Health feature to the server, include the mpHealth feature in the server.xml.
 
-Replace the server configuration file.
+Replace the server configuration file. Navigate to server.xml file: 
+
 `src/main/liberty/config/server.xml`
 
 <pre class="file" data-target="clipboard">
+    
     <server description="Sample Liberty server">
         <featureManager>
             <feature>jaxrs-2.1</feature>
