@@ -1,5 +1,7 @@
 ## Checking the Open Liberty server logs
 
+`Go back to the second shell session`
+
 While the server is running in the foreground, it displays various console messages in the shell. 
 
 These messages are also logged to the `target/liberty/wlp/usr/servers/GettingStartedServer/logs/console.log` file. 
@@ -45,10 +47,6 @@ Try enabling detailed logging of the MicroProfile Health feature by adding the `
 ```
 
 Next, repackage the server:
-
-Go back to the directory where the pom.xml file is in
-
-`cd guide-getting-started/start`{{execute}}
 
 `mvn package`{{execute}}
 

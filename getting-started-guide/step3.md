@@ -2,9 +2,7 @@
 
 The JAX-RS application that contains your `system` microservice is configured as a loose application, meaning that it runs in a server from its `.class` file and other artifacts. Open Liberty automatically monitors these artifacts, and whenever they are updated, it updates the running server without the need for the server to be restarted.
 
-Navigate to the pom.xml file under start directory
-
-
+Navigate to the `pom.xml` file under start directory
 
 
 The loose application support is enabled with the `<looseApplication/>` element in the `liberty-maven-plugin` plug-in.
@@ -28,7 +26,7 @@ Create SystemReadinessCheck class
 
 Open SystemReadinessCheck.java
 
-`SystemReadinessCheck.java`{{open}}
+`/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java`{{open}}
 
 Insert code into SystemReadinessCheck class
 
@@ -79,44 +77,6 @@ Create a new file called `SystemLivenessCheck.java`
 
 Open SystemLivenessCheck
 
-`SystemLivenessCheck.java`{{open}}
-
-<pre class="file" data-target="clipboard">
-package io.openliberty.sample.system;
-
-import javax.enterprise.context.ApplicationScoped;
-
-import java.lang.management.MemoryMXBean;
-import java.lang.management.ManagementFactory;
-
-import org.eclipse.microprofile.health.Liveness;
-import org.eclipse.microprofile.health.HealthCheck;
-import org.eclipse.microprofile.health.HealthCheckResponse;
-
-@Liveness
-@ApplicationScoped
-public class SystemLivenessCheck implements HealthCheck {
-
-    @Override
-    public HealthCheckResponse call() {
-        MemoryMXBean memBean = ManagementFactory.getMemoryMXBean();
-        long memUsed = memBean.getHeapMemoryUsage().getUsed();
-        long memMax = memBean.getHeapMemoryUsage().getMax();
-
-        return HealthCheckResponse.named(
-            SystemResource.class.getSimpleName() + " liveness check")
-                                  .withData("memory used", memUsed)
-                                  .withData("memory max", memMax)
-                                  .state(memUsed < memMax * 0.9).build();
-    }
-
-}
-</pre>
-
-Go back to the directory that the pom.xml file is in, to recomplie with the updates
-
-`cd /root/guide-getting-started/start`{{execute}}
-
 Next, recompile the application:
 
 `mvn compile`{{execute}}
@@ -127,7 +87,7 @@ The following messages display in your first shell session:
 [INFO] [AUDIT] CWWKT0017I: Web application removed (default_host): http://foo:9080/
 [INFO] [AUDIT] CWWKZ0009I: The application io.openliberty.guides.getting-started has stopped successfully.
 [INFO] [AUDIT] CWWKT0016I: Web application available (default_host): http://foo:9080/
-[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in 0.136 seconds.
+[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in xx.xx seconds.
 </pre>
 
 
