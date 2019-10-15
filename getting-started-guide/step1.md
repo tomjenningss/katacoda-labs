@@ -2,8 +2,14 @@
 
 Your application is configured to be built with Maven. Every Maven-configured project contains a pom.xml file, which defines the project configuration, dependencies, plug-ins, and so on.
 
+
 Navigate to the start directory where your pom.xml file is located. Your pom.xml file is configured to include the liberty-maven-plugin, which allows you to install applications into Open Liberty as well as manage the server instances.
 
+`cd guide-getting-started/start`{{execute}}
+
+Install and run the server
+
+`mvn install liberty:run-server`{{execute}}
 
 The mvn command initiates a Maven build, during which the target directory is created to store all build-related files.
 
