@@ -10,21 +10,17 @@ You can find the complete server logs in the
 
 In addition to the log files that are generated automatically, you can enable logging of specific Java packages or classes by using the `<logging/>` element:
 
-<pre>
+```
 <logging traceSpecification="<component_1>=<level>:<component_2>=<level>:..."/>
-</pre>
+```
 
 The `component` element is a Java package or class, and the `level` element is one of the following logging levels: `off`, `fatal`, `severe`, `warning`, `audit`, `info`, `config`, `detail`, `fine`, `finer`, `finest`, `all`.
 
 Try enabling detailed logging of the MicroProfile Health feature by adding the `<logging/>` element to your configuration file.
 
-Go to the server.xml configuration directory and replace the configuration file 
+`src/main/liberty/config/server.xml`{{open}}
 
-`cd src/main/liberty/config/`{{execute}}
 ```
-<pre class="file" data-target="clipboard">
-
-
 <server description="Sample Liberty server">
     <featureManager>
         <feature>jaxrs-2.1</feature>
@@ -46,11 +42,13 @@ Go to the server.xml configuration directory and replace the configuration file
 
     <webApplication location="getting-started.war" contextRoot="/"/>
 </server>
-
-
-</pre>
 ```
+
 Next, repackage the server:
+
+Go back to the directory where the pom.xml file is in
+
+`cd guide-getting-started/start`{{execute}}
 
 `mvn package`{{execute}}
 
