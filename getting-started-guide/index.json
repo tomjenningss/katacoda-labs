@@ -7,11 +7,13 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md"
+        "text": "step1.md",
+        "code": "frontend.sh"
       },
       {
         "title": "Step 2",
-        "text": "step2.md"
+        "text": "step2.md",
+        "code": "frontend.sh"
       },
       {
         "title": "Step 3",
