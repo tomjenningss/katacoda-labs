@@ -54,4 +54,3 @@ Go back to the directory where the pom.xml file is in
 
 Now, when you visit the `/health` endpoint, additional traces are logged into the `trace.log` file.
 
-.
