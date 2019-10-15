@@ -14,15 +14,13 @@ Try updating the server configuration while the server is running. If you stoppe
 
 `Error 404: java.io.FileNotFoundException: SRVE0190E: File not found: /health`
 
-Open up the server.xml file and add the MicroProfile Health feature to the server, include the mpHealth feature in the server.xml.
-
-Replace the server configuration file. Navigate to server.xml file: 
-
-Open server.xml file 
+Open up the `server.xml` file and add the MicroProfile Health feature to the server, include the mpHealth feature in the server.xml.
+ 
+Open `server.xml` file 
 
 `guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
 
-Add the feature to line 8 of the server.xml file
+Add the mpHealth feature tag between the `<feature manager>` tags:
 
 `<feature>mpHealth-2.0</feature>`{{copy}}
 
@@ -46,7 +44,7 @@ When enabled, the `mpHealth` feature automatically adds a `/health` endpoint to 
 [INFO] [AUDIT] CWWKF0012I: The server installed the following features: [mpHealth-1.0].
 [INFO] [AUDIT] CWWKF0008I: Feature update completed in 0.285 seconds.
 [INFO] [AUDIT] CWWKT0016I: Web application available (default_host): http://foo:9080/
-[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in 0.173 seconds.
+[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in 0.XXX seconds.
 </pre>
 
 
