@@ -2,19 +2,8 @@
 
 Your application is configured to be built with Maven. Every Maven-configured project contains a pom.xml file, which defines the project configuration, dependencies, plug-ins, and so on.
 
-Firstly, we need to export the Java Home JRE
-
-`export JAVA_HOME=$(/usr/lib/jvm/java-8-openjdk-amd64)`{{execute}}
-
-`export PATH=$JAVA_HOME/jre/bin:$PATH`{{execute}}
-
 Navigate to the start directory where your pom.xml file is located. Your pom.xml file is configured to include the liberty-maven-plugin, which allows you to install applications into Open Liberty as well as manage the server instances.
 
-`cd guide-getting-started/start`{{execute}}
-
-Install and run the server
-
-`mvn install liberty:run-server`{{execute}}
 
 The mvn command initiates a Maven build, during which the target directory is created to store all build-related files.
 
@@ -41,6 +30,8 @@ To access the `system` microservice, access the service endpoint to cause some a
  Later, when you need to stop the server, simply press `CTRL+C` in the shell session where you ran the server. 
  Do not stop the server yet.
 
+
+Open up a new terminal window
 
 
 
