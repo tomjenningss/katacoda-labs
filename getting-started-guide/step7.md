@@ -4,6 +4,10 @@ To run the application in a container, you need to have Docker installed. For in
 
 To containerize the application, you need a `Dockerfile`. This file contains a collection of instructions that define how a Docker image is built, what files are packaged into it, what commands run when the image runs as a container, and so on. You can find a complete `Dockerfile` in the `start` directory. This `Dockerfile` packages the `usr` server package into a Docker image that contains a preconfigured Open Liberty server.
 
+Change directories to build the docker containers:
+
+`cd ..`{{execute}}
+
 To build and containerize the application, start your Docker daemon and run the following command:
 
 `docker build -t openliberty-getting-started:1.0-SNAPSHOT .`{{execute}}
@@ -58,10 +62,3 @@ To stop and remove the container, run the following commands:
 To remove the image, run the following command:
 
 `docker rmi openliberty-getting-started:1.0-SNAPSHOT`{{execute}}
-
-
-
-
-Nice work! You’ve learned the basics of deploying and updating an application on an Open Liberty server.
-
-Deploying and packaging applications by Open Liberty is licensed under CC BY-ND 4.0
