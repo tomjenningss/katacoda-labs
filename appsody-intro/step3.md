@@ -23,6 +23,7 @@ Deployed project running at http://localhost:30062
 
 The very last line tells you where the application is available. Let’s call the resource by opening this endpoint in the browser:
 
+Take note of the port number `http://localhost:30062` `30062` as you will need the port number to access the end point 
 
 <a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:32748/resource</a>
 
