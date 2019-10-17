@@ -106,13 +106,11 @@ You should see that upon saving the file the source code change is detected and 
 [Container] App started on PORT 3000
 </pre>
 
-Now if you browse <a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:3000/resource</a> you should see the message Resource from Appsody! instead of the original Not Found message
+Now if you browse <a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:3000/resource</a> you should see the message: `Resource from Appsody!` instead of the original Not Found message
 
 Try changing the message in app.js saving and refreshing the page. You’ll see it only takes a few seconds for the change to take effect.
-When you’re done, type Ctrl-C to end the appsody run.
+
+When you’re done, type `Ctrl-C` to end the appsody run.
 
 
---- 
-
-## Deploying to Kubernetes
 
