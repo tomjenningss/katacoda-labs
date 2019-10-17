@@ -1,11 +1,3 @@
-
-##This is initial development and wont be in the production guide - Setting up pre reqs
-`curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add`{{execute}}
-
-`sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"`{{execute}}
-
-`sudo apt-get install kubeadm kubelet kubectl`{{execute}}
-
 `mkdir appsody-install`{{execute}}
 
 `wget -P /root/appsody-install/ "https://github.com/appsody/appsody/releases/download/0.4.6/appsody_0.4.6_amd64.deb"`{{execute}}
