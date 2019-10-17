@@ -12,7 +12,7 @@
 
 `sudo apt install -f /root/appsody-install/appsody_0.4.6_amd64.deb`{{execue}}
 
----
+
 
 ## Developing Cloud-native applications - Appsody
 
