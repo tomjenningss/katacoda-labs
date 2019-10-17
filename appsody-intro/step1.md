@@ -1,11 +1,3 @@
-`mkdir appsody-install`{{execute}}
-
-`wget -P /root/appsody-install/ "https://github.com/appsody/appsody/releases/download/0.4.6/appsody_0.4.6_amd64.deb"`{{execute}}
-
-`sudo apt install -f /root/appsody-install/appsody_0.4.6_amd64.deb`{{execue}}
-
-
-
 ## Developing Cloud-native applications - Appsody
 
 We are going to start by trying out the developer experience Appsody provides
