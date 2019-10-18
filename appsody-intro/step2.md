@@ -75,13 +75,13 @@ Let’s now make a code change. The Node.js Express stack can dynamically update
 First, navigate to the REST application endpoint to confirm that there are no esources available. Open the following link in your browser:
 
 
-<a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:3000/resource</a>{{execute}}
+<a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:3000/resource</a>
 
 You should see an `Not Found` response.
 
 Open up the app.js file:
 
-`/root/workspace/kabanero-workshop/nodejs.app.js`{{open}}
+`/root/workspace/kabanero-workshop/nodejs/app.js`{{open}}
 
 Insert to modify the app.js source file to include the extra "/resource" REST path:
 
