@@ -81,7 +81,7 @@ You should see an `Not Found` response.
 
 Open up the app.js file:
 
-`/root/workspace/kabanero-workshop/nodejs/app.js`{{open}}
+`workspace/kabanero-workshop/nodejs/app.js`{{open}}
 
 Insert to modify the app.js source file to include the extra "/resource" REST path:
 
