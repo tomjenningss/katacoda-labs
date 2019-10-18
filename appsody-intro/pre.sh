@@ -1,3 +1,4 @@
+npm install express
 touch env.env
 echo "PORT=30000" >> ./env.env
 mkdir appsody-install
