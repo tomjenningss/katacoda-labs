@@ -12,8 +12,6 @@ The Appsody command-line tool (CLI) enables the rapid development of cloud nativ
 
 
 <pre>
-Complete documentation is available at https://appsody.dev
-
 Usage:
   appsody [command]
 
