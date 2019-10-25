@@ -23,9 +23,11 @@ Deployed project running at http://localhost:30062
 
 The very last line tells you where the application is available. Let’s call the resource by opening this endpoint in the browser:
 
-Take note of the port number `http://localhost:30062` `30062` as you will need the port number to access the end point 
+Take note of the port number `http://localhost:<PORT_NUMBER>` `e.g: 30000` as you will need the port number to access the end point 
 
-<a href="https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:32748/resource</a>
+<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:30000/resource</a>
+
+Type in the port number into the katacoda webpage to access the end point.
 
 You should now see the response from your JAX-RS resource.
 
@@ -80,9 +82,9 @@ The `app-deploy.yaml` is generated from the stack and used to deploy to Kubernet
 
 Check out the `liveness` and `readiness` endpoints by pointing your browser at the following URLs, remembering to replace the port numbers with the port numbers from the output of the `appsody deploy` command:
 
-<a href="https://[[HOST_SUBDOMAIN]]-32748-[[KATACODA_HOST]].environments.katacoda.com/live"> http://localhost:32748/live</a>
+<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/live"> http://localhost:30000/live</a>
 
-<a href="https://[[HOST_SUBDOMAIN]]-32748-[[KATACODA_HOST]].environments.katacoda.com/ready"> http://localhost:32748/ready</a>
+<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/ready"> http://localhost:30000/ready</a>
 
 You should see something like:
 
